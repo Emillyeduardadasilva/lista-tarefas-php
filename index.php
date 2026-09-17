@@ -1,18 +1,32 @@
 <?php
 
 $nome = "Emilly";
-$curso = "Engenharia de Software";
-$tarefa = "Estudar PHP";
+$tarefas = [
+    "Estudar PHP",
+    "Fazer atividade",
+    "Praticar Git",
+    "Estudar banco de dados" 
+];
 
-echo"Olá, $nome!";
-echo"<br>";
-echo"Curso: $curso";
-echo"<br>";
+?>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-if ($tarefa != "") {
-    echo "Tarefa de hoje: $tarefa";
-} else {
-    echo "Você não tem nenhuma tarefa.";
-}
+</head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas </title>
+</head>
 
+<body> 
+    <h1>Minha Lista de tarefas</h1>
+
+    <p> Olá, <?php echo $nome; ?>!</p>
+
+    <ul>
+        <?php foreach ($tarefas as $tarefa) { ?>
+            <li><?php echo $tarefa; ?></li>
+        <?php } ?>
+     <ul>
+</body>
+</html>
